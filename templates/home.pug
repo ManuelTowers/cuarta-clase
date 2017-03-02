@@ -1,0 +1,23 @@
+doctype html
+html
+	head
+		meta(charset='utf-8')
+		title Nodemon rules
+		link(rel='stylesheet', href='/css/foundation.css')
+		link(rel='stylesheet', href='/css/main.css')
+	body 
+		form(method='POST', action='/add')
+			p Nombre
+			input(type='text',
+			name='first__name')
+			p Apellido
+			input(type='text', 
+			name='last__name')
+	 
+			button(class='button') agregar
+		div
+			if users.length
+				each user in users 
+					p #{user.first__name} #{user.last__name}
+			else
+				p NO HAY USUARIOS 
